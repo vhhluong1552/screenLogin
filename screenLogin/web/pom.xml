@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-    <artifactId>screenLogin</artifactId>
-    <groupId>org.sakaiproject.tool.screenLogin</groupId>
-    <version>23.0</version>
-  </parent>
+<!--	<parent>-->
+<!--    <artifactId>screenLogin</artifactId>-->
+<!--    <groupId>org.sakaiproject.tool.screenLogin</groupId>-->
+<!--    <version>23.0</version>-->
+<!--  </parent>-->
 	<!-- Comments parent tag to run the web standalone -->
 	<groupId>org.sakaiproject.tool.screenLogin</groupId>
 	<artifactId>screenLogin-web</artifactId>

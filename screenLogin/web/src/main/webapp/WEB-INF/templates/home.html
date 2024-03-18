@@ -2,27 +2,159 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>The generated source code Web Application for Sakai</title>
+<title>GHN - Express</title>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
-    <div th:replace="~{fragments/header :: header}">Header</div>
-    <div class="container">
-        <div class="text-center">
-            <div class="lead">
-                <H1>Refer document at http://www.thymeleaf.org/doc/articles/layouts.html to make your own layout.</H1>
-            </div>
-            <div class="lead">Welcome to the generated source code Web Application for Sakai.</div>
-			<p>Login userId: <span th:text="${session.userDisplayName}"></span></p>
-			<p>Login Display Username: <span th:text="${session.userEid}"></span></p>
-            <p>
-                <a id="signup" class="btn btn-success btn-lg">Sign up</a>
-            </p>
-        </div>
-        <div th:insert="~{fragments/footer :: footer}">&copy; 2017 The MKS Group</div>
-    </div>
+	<style>
+body {
+	height: 100vh
+}
 
+.form-control {
+	border: 2px solid red;
+	border-radius: 16px;
+}
+</style>
+
+	<div id="root">
+		<div class="hidden-scroll ">
+			<div class="container-fluid row">
+				<div class="col-md-4 left-content content  ">
+					<div class="background-left" style="height:100vh">
+						<img class="banner flex"
+							src="https://storage.googleapis.com/online-prod-public/notifications%2F2024%2FJanuary%2F31%2F%5B49676212-267e-46b0-9117-17c3495c13a4%5D1910x2440.png"
+							style="width: 100%; height: 100%; cursor: pointer;" alt="banner">
+					</div>
+
+				</div>
+				<div class="col-md-8 right-content">
+					<div class="form-content">
+						<div class="register-content">
+							<div class="title-register">
+								<div
+									class="text-center text-orange register-row-1 font-weight-bold mt-2 "
+									style="font-size: 28px">TẠO TÀI KHOẢN GHN</div>
+								<div
+									class="text-danger text-center register-row-2 font-weight-bold mt-2">GHN
+									luôn đồng hành cùng bạn</div>
+							</div>
+							<div class="register-form">
+								<div class="container row mt-4">
+									<div class="col-md-6">
+										<div class="form-group1">
+											<label for="goal">Mục đích sử dụng</label> <select
+												class="form-control " id="sel1" placeholder="Password"
+												name="sellist1">
+												<option>Cá nhân</option>
+												<option>Cửa hàng/Doanh nghiệp</option>
+
+											</select> <label for="express">Qui mô vận chuyển</label> <select
+												class="form-control" id="sel1" name="sellist1">
+												<option>Không có nhu cầu thường xuyên</option>
+												<option>Dưới 150 ĐH/tháng</option>
+												<option>Từ 150 - dưới 900 ĐH/tháng</option>
+												<option>Từ 900 - dưới 3.000 ĐH/tháng</option>
+												<option>Từ 3.000 - 6.000 ĐH/tháng</option>
+												<option>Từ 6000 ĐH/tháng trở lên</option>
+
+
+											</select>
+											<div class="form-group">
+												<label for="inputPhone">Số điện thoại</label> <input
+													type="text" class="form-control" id="inputPhone"
+													placeholder="Nhập số điện thoại">
+											</div>
+											<div class="form-group">
+												<label for="inputPassword">Mật khẩu</label> <input
+													type="password" class="form-control" id="inputPassword"
+													placeholder="Tối thiểu 8 kí tự bao gồm chữ cái và số">
+											</div>
+
+
+
+										</div>
+
+									</div>
+									<div class="col-md-6">
+										<div class="form-group2">
+											<label for="userName">Tên tài khoản</label> <input
+												type="text" class="form-control" id="userName"
+												placeholder="Tên tài khoản">
+										</div>
+
+										<label for="express">Ngành hàng</label> <select
+											class="form-control" id="sel1" name="sellist1" style="">
+											<option>Không có nhu cầu thường xuyên</option>
+											<option>Dưới 150 ĐH/tháng</option>
+											<option>Từ 150 - dưới 900 ĐH/tháng</option>
+											<option>Từ 900 - dưới 3.000 ĐH/tháng</option>
+											<option>Từ 3.000 - 6.000 ĐH/tháng</option>
+											<option>Từ 6000 ĐH/tháng trở lên</option>
+
+
+										</select>
+										<div class="form-group">
+											<label for="emailInput">Email</label> <input type="email"
+												class="form-control" id="emailInput"
+												placeholder="Nhập email">
+										</div>
+										<div class="form-group">
+											<label for="againInputPassword">Nhập lại mật khẩu</label> <input
+												type="password" class="form-control" id="againInputPassword"
+												placeholder="Tối thiểu 8 kí tự bao gồm chữ cái và số">
+										</div>
+
+
+
+									</div>
+									<div class="register-row-4 w-100
+								">
+										<div class="content-register text-center">
+											<div class="form-group">
+												<p style="margin-top: 12px;">
+													Bằng việc nhấn "Đăng ký", bạn đồng ý với <br> <a
+														target="_blank" rel="noopener noreferrer"
+														href="https://ghn.vn/pages/dieu-khoan-su-dung"><span
+														style="color: rgb(255, 99, 57); font-weight: 700;">Điều
+															khoản dịch vụ</span></a> và <a target="_blank"
+														rel="noopener noreferrer"
+														href="https://ghn.vn/pages/chinh-sach-bao-mat"><span
+														style="color: rgb(255, 99, 57); font-weight: 700;">Quy
+															định Riêng tư Cá nhân</span></a> <br>của chúng tôi.
+												</p>
+												<button type="button" tabindex="9"
+													class="btn-primay-page btn-register btn btn-secondary "
+													style="color: white; background-color: rgb(255, 99, 57); font-weight: 700">Đăng
+													ký</button>
+											</div>
+
+										</div>
+									</div>
+									<div class="text-center register-row-3 w-100">
+										<label class="">Bạn đã có tài khoản?</label><a
+											href="/v2/ssoLogin?app=import&amp;returnUrl=http://khachhang.ghn.vn/sso-login?token="
+											style="color: rgb(255, 99, 57); font-weight: 700; text-decoration: none;">
+											Đăng nhập ngay</a>
+									</div>
+
+								</div>
+							</div>
+							<div class="Toastify"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
